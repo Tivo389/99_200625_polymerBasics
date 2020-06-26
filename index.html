@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>200625_polymerBasics</title>
+    <meta name="description" content="Learning the basics of Polymer">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="/src/polymerBasics-app/polymer-basics.js" crossorigin></script>
+    <!-- 01: Global level variables are defined here. -->
+    <custom-style>
+      <style>
+        html {
+          --color-red: red;
+          --color-gold: gold;
+          --color-white: white;
+          --color-blue: blue;
+          --duration-lg: 500ms;
+        }
+        body {
+          margin: 0;
+          padding: 0;
+        }
+      </style>
+    </custom-style>
+
+  </head>
+  <body>
+    <!-- 02: This loads the primary app -->
+    <polymer-basics></polymer-basics>
+  </body>
+</html>

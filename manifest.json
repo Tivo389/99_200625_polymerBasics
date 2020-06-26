@@ -1,0 +1,7 @@
+{
+  "name": "200625_polymerBasics",
+  "short_name": "200625_polymerBasics",
+  "description": "Learning the basics of Polymer",
+  "start_url": "/",
+  "display": "standalone"
+}
