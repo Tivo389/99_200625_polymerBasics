@@ -1,5 +1,6 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import './css/style-module-index.js';
+import './components/basic-button.js'
 
 /**
  * @customElement
@@ -13,38 +14,22 @@ class PolymerBasics extends PolymerElement {
           align-items: center;
           background: var(--color-gold);
           display: flex;
-          font-family: sans-serif;
+          flex-direction: column;
           height: 100vh;
           justify-content: center;
-          width: 100vw;
           transition-duration: var(--duration-lg);
+          width: 100vw;
         }
         :host(.active) {
-          background: var(--color-blue);
-        }
-        :host(.active) h1 {
-          color: var(--color-gold);
+          background: var(--color-white);
         }
       </style>
-      <h1>
-        [[prop1]]!
-      </h1>
+      <h3>Basic Buttons</h3>
+      <basic-button></basic-button>
     `;
-  }
-  static get properties() {
-    return {
-      prop1: {
-        type: String,
-        value: 'CLICK ME'
-      }
-    };
   }
   ready() {
     super.ready();
-    this.addEventListener('click', this._handleClick);
-  }
-  _handleClick(e) {
-    e.currentTarget.classList.toggle('active');
   }
 }
 
