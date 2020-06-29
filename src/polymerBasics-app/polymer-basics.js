@@ -9,7 +9,8 @@ import './components/basic-button.js'
 class PolymerBasics extends PolymerElement {
   static get template() {
     return html`
-      <style include="style-module-index">
+      <!-- 03: Assign styling for the element -->
+      <style>
         :host {
           align-items: center;
           background: var(--color-gold);
@@ -20,11 +21,12 @@ class PolymerBasics extends PolymerElement {
           transition-duration: var(--duration-lg);
           width: 100vw;
         }
+        /* 04: When the host-element (polymer-basics) has active class */
         :host(.active) {
           background: var(--color-white);
         }
       </style>
-      <h3>Basic Buttons</h3>
+      <!-- 05: This is an element in an element => basic-button.js -->
       <basic-button></basic-button>
     `;
   }
