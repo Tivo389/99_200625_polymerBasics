@@ -10,6 +10,15 @@ styleModule.innerHTML = `
         user-select: none;
         transition-duration: var(--duration-lg);
       }
+      ul {
+        font-family: sans-serif;
+        font-size: 14px;
+        padding-inline-start: 1rem;
+        color: var(--color-dark-gray)
+      }
+      li + li {
+        margin-top: 0.35em;
+      }
     </style>
   </template>
 `;
