@@ -10,7 +10,7 @@ class BasicButton extends PolymerElement {
     return html`
       <style include="style-module-index">
         :host {
-          align-items: flex-start;
+          align-items: center;
           background-color: var(--color-opaque-white);
           border-radius: var(--border-radius-md);
           display: flex;

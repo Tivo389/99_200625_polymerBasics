@@ -1,6 +1,7 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import './css/style-module-index.js';
 import './components/basic-button.js'
+import './components/component-template.js'
 
 /**
  * @customElement
@@ -12,14 +13,15 @@ class PolymerBasics extends PolymerElement {
       <!-- 03: Assign styling for the element -->
       <style>
         :host {
-          align-items: center;
           background: var(--color-gold);
           display: flex;
-          flex-direction: column;
-          height: 100vh;
-          justify-content: center;
+          flex-direction: row;
+          flex-wrap: wrap;
+          min-height: 100vh;
           transition-duration: var(--duration-lg);
-          width: 100vw;
+          padding: 1rem;
+          box-sizing: border-box;
+          min-width: 100%;
         }
         /* 04: When the host-element (polymer-basics) has active class */
         :host(.active) {
@@ -28,6 +30,7 @@ class PolymerBasics extends PolymerElement {
       </style>
       <!-- 05: This is an element in an element => basic-button.js -->
       <basic-button></basic-button>
+      <component-template></component-template>
     `;
   }
   ready() {
