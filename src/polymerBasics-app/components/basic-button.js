@@ -4,7 +4,7 @@ class BasicButton extends PolymerElement {
   constructor() {
     super();
     // 06: Calling addEventListener upon class initiation
-    this.addEventListener('click', this._handleClick);
+    this.addEventListener('click', this._handleElementClick);
   }
   static get template () {
     return html`
@@ -40,28 +40,6 @@ class BasicButton extends PolymerElement {
           background: var(--color-gold);
           color: var(--color-white);
         }
-        button {
-          background: var(--color-white);
-          border-radius: 999px;
-          border: none;
-          color: var(--color-black);
-          cursor: pointer;
-          font-family: sans-serif;
-          font-size: 1rem;
-          width: 100%;
-          padding: 1em 2em;
-          text-align: center;
-          transition-duration: var(--duration-sm);
-        }
-        button:hover {
-          transform: translateY(2px);
-        }
-        button:active {
-          transform: translateY(4px);
-        }
-        button:focus {
-          outline: none;
-        }
       </style>
       <h3>Basic Button</h3>
       <ul>
@@ -69,7 +47,7 @@ class BasicButton extends PolymerElement {
         <li>Basic :host Styling</li>
         <li>Basic Functions</li>
       </ul>
-      <button type="button" role="button">
+      <button type="button" role="button" on-click="_handleButtonClick">
         Click Me
       </button>
     `;
@@ -77,7 +55,10 @@ class BasicButton extends PolymerElement {
   // - 08: The general structure for methods is near identical to React.
   //   - Underscore seems to be a Polymer Convention
   //   - https://polymer-library.polymer-project.org/3.0/docs/devguide/properties#private-and-protected-properties
-  _handleClick(e) {
+  _handleElementClick() {
+    console.log('_handleElementClick called!');
+  }
+  _handleButtonClick() {
     document.querySelector('polymer-basics').classList.toggle('active');
   }
 }
