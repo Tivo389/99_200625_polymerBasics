@@ -9,6 +9,34 @@ styleModule.innerHTML = `
         width: calc(50% - 2rem);
         box-sizing: border-box;
       }
+      :host *,
+      :host *::before,
+      :host *::after {
+        box-sizing: inherit;
+      }
+      button {
+        background: var(--color-white);
+        border-radius: 999px;
+        border: none;
+        color: var(--color-black);
+        cursor: pointer;
+        font-family: sans-serif;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 240px;
+        padding: 1em 2em;
+        text-align: center;
+        transition-duration: var(--duration-sm);
+      }
+      button:hover {
+        transform: translateY(2px);
+      }
+      button:active {
+        transform: translateY(4px);
+      }
+      button:focus {
+        outline: none;
+      }
       h3 {
         color: var(--color-blue);
         margin: 0;
