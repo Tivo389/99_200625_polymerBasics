@@ -16,25 +16,28 @@ class BasicProperties extends PolymerElement {
       },
       awake: {
         type: Boolean,
-        value: false
+        value: false,
+        observer: '_observerAwakeProperty'
       },
       awakeStatus: {
         type: String,
         value: 'asleep',
-        computed: '_computeAwakeProperty(awakeValue)',
-        observer: '_observerAwakeProperty'
+        computed: '_computeAwakeProperty(awake)',
       }
     }
   }
-  _computeAwakeProperty(awakeValue) {
-    if (awakeValue) {
-      return 'I am awake!';
-    } else {
-      return 'I am asleep!';
-    }
+  // 02: Computed is called as the awake-property value is toggle in step 01
+  _computeAwakeProperty(awake) {
+    console.log('---------------------');
+    console.log('_computeAwakeProperty');
+    console.log("This is called when the computed-property's method-argument value changes.");
+    return awake ? 'awake' : 'asleep';
   }
+  // 03: Observer is called at the end (by default?) since the value was toggled in step 01
   _observerAwakeProperty() {
-    console.log('_awakePropertyObserver called');
+    console.log('---------------------');
+    console.log('_observerAwakeProperty');
+    console.log("This is called when the property's value changes.")
   }
   static get template () {
     return html`
@@ -50,7 +53,8 @@ class BasicProperties extends PolymerElement {
         }
       </style>
       <h3>Basic Properties</h3>
-      <p>My name is [[firstName]] [[lastName]], and I am [[awakeStatus]]</p>
+      <!-- 04: The status updated triggered in step 01 get's reflected here -->
+      <p>My name is [[firstName]] [[lastName]],<br>I am currently [[awakeStatus]].</p>
       <ul>
         <li>Basic Properties</li>
         <li>Basic Data-Binding</li>
@@ -62,9 +66,9 @@ class BasicProperties extends PolymerElement {
 
     `;
   }
-  _handleButtonClick(e) {
-    console.log('You Clicked Me!');
-    // 999 CONTINUE HERE TO CHANGE THE PROPERTY!
+  // 01: On button click, toggle the awake-property of this class.
+  _handleButtonClick() {
+    this.awake = !this.awake;
   }
 }
 customElements.define('basic-properties', BasicProperties);

@@ -1,5 +1,5 @@
 const styleModule = document.createElement('dom-module');
-styleModule.innerHTML = `
+styleModule.innerHTML = /*html*/`
   <template>
     <style>
       :host {
@@ -44,6 +44,10 @@ styleModule.innerHTML = `
         text-transform: uppercase;
         user-select: none;
         transition-duration: var(--duration-lg);
+      }
+      p {
+        text-align: center;
+        max-width: 240px;
       }
       ul {
         font-family: sans-serif;
