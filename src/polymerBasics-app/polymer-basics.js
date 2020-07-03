@@ -2,6 +2,7 @@ import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import './css/style-module-index.js';
 import './components/basic-button.js'
 import './components/basic-properties.js'
+import './components/basic-shadow-dom.js'
 import './components/component-template.js'
 
 /**
@@ -32,6 +33,17 @@ class PolymerBasics extends PolymerElement {
       <!-- 05: This is an element in an element => basic-button.js -->
       <basic-button></basic-button>
       <basic-properties></basic-properties>
+      <basic-shadow-dom>
+        This <b>1st</b> line of text goes in the unnamed slot.
+        <span slot="namedSlot">This <b>2nd</b> line of text goes in the named slot.</span>
+        <span>This <b>3rd</b> line of text will appear combined with the 1st line of text.</span>
+        <span slot="unknownSlot">This <b>4th</b> line of text will appear no where.</span>
+        <span>
+          <span slot="namedSlot">
+            This <b>5th</b> line of text in the second-level child will not match the named slot and be placed in the unname slot as only top-level children can match a slot.
+          </span>
+        </span>
+      </basic-shadow-dom>
       <component-template></component-template>
     `;
   }
