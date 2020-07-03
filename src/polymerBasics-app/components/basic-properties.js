@@ -8,21 +8,25 @@ class BasicProperties extends PolymerElement {
     return {
       firstName: {
         type: String,
-        value: 'Jon'
+        value: 'Jon',
+        reflectToAttribute: true
       },
       lastName: {
         type: String,
-        value: 'Doe'
+        value: 'Doe',
+        reflectToAttribute: true
       },
       awake: {
         type: Boolean,
         value: false,
-        observer: '_observerAwakeProperty'
+        observer: '_observerAwakeProperty',
+        reflectToAttribute: true
       },
       awakeStatus: {
         type: String,
         value: 'asleep',
         computed: '_computeAwakeProperty(awake)',
+        reflectToAttribute: true
       }
     }
   }

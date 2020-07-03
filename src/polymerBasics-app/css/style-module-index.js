@@ -25,6 +25,7 @@ styleModule.innerHTML = /*html*/`
         width: 100%;
         max-width: 240px;
         padding: 1em 2em;
+        margin: var(--space-unit-lg) 0 0 0;
         text-align: center;
         transition-duration: var(--duration-sm);
       }
@@ -39,24 +40,31 @@ styleModule.innerHTML = /*html*/`
       }
       h3 {
         color: var(--color-blue);
-        margin: 0;
+        margin: 0 0 var(--space-unit-lg) 0;
         font-family: sans-serif;
         text-transform: uppercase;
         user-select: none;
         transition-duration: var(--duration-lg);
       }
       p {
-        text-align: center;
-        max-width: 240px;
+        text-align: left;
+        margin: 0;
+      }
+      p:last-of-type {
+        margin-bottom: var(--space-unit-lg);
       }
       ul {
         font-family: sans-serif;
         font-size: 14px;
         padding-inline-start: 1rem;
+        margin: 0;
         color: var(--color-dark-gray)
       }
+      p + p {
+        margin-top: var(--space-unit-md);
+      }
       li + li {
-        margin-top: 0.35em;
+        margin-top: var(--space-unit-sm);
       }
     </style>
   </template>
