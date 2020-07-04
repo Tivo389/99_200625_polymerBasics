@@ -29,12 +29,19 @@ class BasicShadowDom extends PolymerElement {
         }
       </style>
       <h3>Basic Shadow Dom</h3>
+      <ul>
+        <li>Basic Shadow DOM</li>
+        <li>Basic Slots</li>
+      </ul>
       <hr>
       <code>Unnamed Slot</code>
       <p><slot></slot></p>
       <hr>
       <code>Named Slot</code>
       <p><slot name="namedSlot"></slot></p>
+      <hr>
+      <code>Fallback Content</code>
+      <p><slot name="fallbackSlot">This is the fallback content being displayed</slot></p>
     `;
   }
   _handleClick(e) {

@@ -4,6 +4,7 @@ import './components/basic-button.js'
 import './components/basic-properties.js'
 import './components/basic-shadow-dom.js'
 import './components/component-template.js'
+import './components/multi-level-slots.js'
 
 /**
  * @customElement
@@ -43,7 +44,9 @@ class PolymerBasics extends PolymerElement {
             This <b>5th</b> line of text in the second-level child will not match the named slot and be placed in the unname slot as only top-level children can match a slot.
           </span>
         </span>
+        <!-- <span slot="fallbackSlot">I will replace fallback content if uncommented</span> -->
       </basic-shadow-dom>
+      <multi-level-slots></multi-level-slots>
       <component-template></component-template>
     `;
   }
