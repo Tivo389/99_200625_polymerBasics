@@ -23,11 +23,19 @@ class MultilevelSlots extends PolymerElement {
         }
         :host h3 {
           text-align: center;
+          margin-bottom: var(--space-unit-md);
+        }
+        :host h4 {
+          border: 1px dashed var(--color-gray);
+          padding: 0.35em 0.7em 0.2275em 0.7em;
+          border-radius: 8px;
+          margin: 0;
         }
       </style>
       <h3>Multi-level Slots</h3>
       <multi-level-slot-parent>
-        <p>I am first assigned to parentLevel, then parentLevel is assigned to childLevel</p>
+        <h4 slot="parent">Parent</h4>
+        <p slot="child">Child</p>
       </multi-level-slot-parent>
     `;
   }

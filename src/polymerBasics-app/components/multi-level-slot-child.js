@@ -16,14 +16,13 @@ class MultilevelSlotChild extends PolymerElement {
           display: flex;
           flex-direction: column;
           flex: 1 0 auto;
-          height: 100%;
           justify-content: center;
           margin: 2rem;
           padding: 2rem;
           width: 100%;
         }
       </style>
-      <slot data-level="childLevel"></slot>
+      <slot name="child"></slot>
     `;
   }
 }
