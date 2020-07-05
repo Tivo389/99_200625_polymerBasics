@@ -15,16 +15,20 @@ class MultilevelSlotParent extends PolymerElement {
           box-sizing: border-box;
           background-color: var(--color-opaque-white);
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           flex: 1 0 auto;
           height: 100%;
           width: 100%;
           justify-content: center;
           padding: 2rem;
         }
+        :host h4 {
+          background: var(--color-red); /* Note how this style is not applied to the h4 (Parent) */
+        }
       </style>
+      <slot name="parent"></slot>
       <multi-level-slot-child>
-        <slot data-level="parentLevel"></slot>
+        <slot name="child" slot="child"></slot>
       </multi-level-slot-child>
     `;
   }

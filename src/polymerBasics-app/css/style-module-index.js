@@ -40,7 +40,7 @@ styleModule.innerHTML = /*html*/`
       }
       h3 {
         color: var(--color-blue);
-        margin: 0 0 var(--space-unit-lg) 0;
+        margin: 0;
         font-family: sans-serif;
         text-transform: uppercase;
         user-select: none;
@@ -50,17 +50,19 @@ styleModule.innerHTML = /*html*/`
         text-align: left;
         margin: 0;
       }
-      p:last-of-type {
-        margin-bottom: var(--space-unit-lg);
-      }
       ul {
         font-family: sans-serif;
         font-size: 14px;
-        padding-inline-start: 1rem;
+        padding-inline-start: 0;
         margin: 0;
-        color: var(--color-dark-gray)
+        list-style: inside;
+        color: var(--color-dark-gray);
       }
-      p + p {
+      li {
+        text-indent: -1.35em;
+        margin-left: 1.35em;
+      }
+      p + p, h3 + p, h3 + ul {
         margin-top: var(--space-unit-md);
       }
       li + li {

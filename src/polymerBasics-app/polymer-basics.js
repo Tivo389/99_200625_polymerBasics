@@ -5,6 +5,7 @@ import './components/basic-properties.js'
 import './components/basic-shadow-dom.js'
 import './components/component-template.js'
 import './components/multi-level-slots.js'
+import './components/basic-styling-01.js'
 
 /**
  * @customElement
@@ -47,6 +48,7 @@ class PolymerBasics extends PolymerElement {
         <!-- <span slot="fallbackSlot">I will replace fallback content if uncommented</span> -->
       </basic-shadow-dom>
       <multi-level-slots></multi-level-slots>
+      <basic-styling-01></basic-styling-01>
       <component-template></component-template>
     `;
   }
