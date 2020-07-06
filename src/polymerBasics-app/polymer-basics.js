@@ -6,6 +6,8 @@ import './components/basic-shadow-dom.js'
 import './components/component-template.js'
 import './components/multi-level-slots.js'
 import './components/basic-styling-01.js'
+import './components/basic-styling-02.js'
+import './components/basic-styling-03.js'
 
 /**
  * @customElement
@@ -49,6 +51,8 @@ class PolymerBasics extends PolymerElement {
       </basic-shadow-dom>
       <multi-level-slots></multi-level-slots>
       <basic-styling-01></basic-styling-01>
+      <basic-styling-02></basic-styling-02>
+      <basic-styling-03></basic-styling-03>
       <component-template></component-template>
     `;
   }

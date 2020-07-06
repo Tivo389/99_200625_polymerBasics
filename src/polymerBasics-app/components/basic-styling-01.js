@@ -3,7 +3,6 @@ import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 class BasicStyling01 extends PolymerElement {
   constructor() {
     super();
-    this.addEventListener('click', this._handleClick);
   }
   static get template () {
     return html`
@@ -32,8 +31,8 @@ class BasicStyling01 extends PolymerElement {
       </style>
       <h3>basic-styling-01</h3>
       <ul class="basicStyling01">
-        <li>There is a basicStyling01-class-style defined in index.html</li>
-        <li>There is a ul-tag-style defined in the component</li>
+        <li>There is a basicStyling01-class-style (background: red;) defined in index.html</li>
+        <li>There is a ul-tag-style (border: 1px dashed gray;) defined in the component</li>
         <li>Despite the class-style having higher specificity, it will not be applied as host-level selectors CANNOT BE INHERITED to the shadow.</li>
           <ul>
             <li>However, inheritable style properties like color CAN BE INHERITED from host to shadow. (e.g. body {color: white;})</li>

@@ -43,7 +43,6 @@ styleModule.innerHTML = /*html*/`
         margin: 0;
         font-family: sans-serif;
         text-transform: uppercase;
-        user-select: none;
         transition-duration: var(--duration-lg);
       }
       p {
@@ -53,20 +52,23 @@ styleModule.innerHTML = /*html*/`
       ul {
         font-family: sans-serif;
         font-size: 14px;
-        padding-inline-start: 0;
         margin: 0;
+        padding: 0;
         list-style: inside;
         color: var(--color-dark-gray);
+      }
+      ul ul {
+        padding-left: 1.35em;
       }
       li {
         text-indent: -1.35em;
         margin-left: 1.35em;
       }
-      p + p, h3 + p, h3 + ul {
+      p + p, h3 + p, h3 + ul, p + ul {
         margin-top: var(--space-unit-md);
       }
-      li + li {
-        margin-top: var(--space-unit-sm);
+      li + li, li + ul, ul + li {
+        margin-top: var(--space-unit-xs);
       }
     </style>
   </template>
