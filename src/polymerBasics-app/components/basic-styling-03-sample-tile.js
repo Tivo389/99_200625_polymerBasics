@@ -40,9 +40,9 @@ class BasicStyling03SampleTile extends PolymerElement {
           padding: var(--tile-padding);
         }
       </style>
-      <div class="gecTile">
-        <h4 class="gecTileHeader">Separation of Concerns / Beta</h4>
-        <p class="gecTileBody">In computer science, separation of concerns (SoC) is a design principle for separating a computer program into distinct sections such that each section addresses a separate concern.</p>
+      <div>
+        <h4>Separation of Concerns / Beta</h4>
+        <p>In computer science, separation of concerns (SoC) is a design principle for separating a computer program into distinct sections such that each section addresses a separate concern.</p>
       </div>
     `;
   }
