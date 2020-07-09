@@ -21,8 +21,9 @@ class BasicDomTemplatingChildClass extends BasicDomTemplatingBaseClass {
           margin-bottom: var(--space-unit-md);
         }
       </style>
+      <p>Hello! I am the Child Class paragraph element above the <code>$&#123;super.template&#125;</code>!</p>
       ${super.template}
-      <p>Hello! I am the Child Class!</p>
+      <p>Hello! I am the Child Class paragraph element below the <code>$&#123;super.template&#125;</code>!</p>
     `;
   }
 }
