@@ -9,7 +9,10 @@ import './components/basic-styling-01.js'
 import './components/basic-styling-02.js'
 import './components/basic-styling-03.js'
 import './components/css-animation-test.js'
-import './components/basic-dom-templating.js'
+import './components/basic-dom-template-01.js'
+import './components/basic-dom-template-02.js'
+import './components/no-shadow-dom.js'
+import './components/url-in-template.js'
 
 /**
  * @customElement
@@ -56,7 +59,10 @@ class PolymerBasics extends PolymerElement {
       <basic-styling-02></basic-styling-02>
       <basic-styling-03></basic-styling-03>
       <css-animation-test></css-animation-test>
-      <basic-dom-templating></basic-dom-templating>
+      <basic-dom-template-01></basic-dom-template-01>
+      <basic-dom-template-02></basic-dom-template-02>
+      <no-shadow-dom></no-shadow-dom>
+      <url-in-template></url-in-template>
       <component-template></component-template>
     `;
   }

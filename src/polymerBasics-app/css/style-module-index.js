@@ -51,7 +51,6 @@ styleModule.innerHTML = /*html*/`
       }
       ul {
         font-family: sans-serif;
-        font-size: 14px;
         margin: 0;
         padding: 0;
         list-style: inside;

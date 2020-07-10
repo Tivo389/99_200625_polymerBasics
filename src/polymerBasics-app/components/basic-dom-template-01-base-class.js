@@ -1,6 +1,6 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 
-export class BasicDomTemplatingBaseClass extends PolymerElement {
+export class BasicDomTemplate01BaseClass extends PolymerElement {
   constructor() {
     super();
   }
@@ -27,4 +27,4 @@ export class BasicDomTemplatingBaseClass extends PolymerElement {
     `;
   }
 }
-customElements.define('basic-dom-templating-base-class', BasicDomTemplatingBaseClass);
+customElements.define('basic-dom-template-01-base-class', BasicDomTemplate01BaseClass);
