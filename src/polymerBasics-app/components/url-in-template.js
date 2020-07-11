@@ -4,6 +4,9 @@ class UrlInTemplate extends PolymerElement {
   constructor() {
     super();
   }
+  static get importMeta() {
+    return import.meta;
+  }
   static get template () {
     return html`
       <style include="style-module-index">
@@ -16,9 +19,23 @@ class UrlInTemplate extends PolymerElement {
           justify-content: center;
           padding: 2rem;
         }
+        img {
+          max-width: 120px;
+          margin-top: 1rem;
+        }
+        code {
+          width: 15rem;
+        }
       </style>
       <h3>URL IN TEMPLATE</h3>
-      <p>999 COnitnue here</p>
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
+      <img src$="[[importPath]]relative-image.png">
+      <code>[[importPath]]relative-image.png</code>
+      <img src$="[[rootPath]]src/polymerBasics-app/images/root-image.png">
+      <code>[[rootPath]]src/polymerBasics-app/images/root-image.png</code>
     `;
   }
 }
