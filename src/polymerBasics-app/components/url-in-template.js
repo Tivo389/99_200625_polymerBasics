@@ -29,8 +29,8 @@ class UrlInTemplate extends PolymerElement {
       </style>
       <h3>URL IN TEMPLATE</h3>
       <ul>
-        <li></li>
-        <li></li>
+        <li>Top = importPath</li>
+        <li>Bottom = rootPath</li>
       </ul>
       <img src$="[[importPath]]relative-image.png">
       <code>[[importPath]]relative-image.png</code>

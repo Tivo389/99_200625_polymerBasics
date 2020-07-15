@@ -13,6 +13,8 @@ import './components/basic-dom-template-01.js'
 import './components/basic-dom-template-02.js'
 import './components/no-shadow-dom.js'
 import './components/url-in-template.js'
+import './components/style-undefined-elements.js'
+import './components/right-to-left-text.js'
 
 /**
  * @customElement
@@ -63,6 +65,8 @@ class PolymerBasics extends PolymerElement {
       <basic-dom-template-02></basic-dom-template-02>
       <no-shadow-dom></no-shadow-dom>
       <url-in-template></url-in-template>
+      <style-undefined-elements unresolved></style-undefined-elements>
+      <right-to-left-text></right-to-left-text>
       <component-template></component-template>
     `;
   }

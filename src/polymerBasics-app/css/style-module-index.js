@@ -8,6 +8,7 @@ styleModule.innerHTML = /*html*/`
         max-width: calc(50% - 2rem);
         width: calc(50% - 2rem);
         box-sizing: border-box;
+        position: relative;
       }
       :host *,
       :host *::before,
