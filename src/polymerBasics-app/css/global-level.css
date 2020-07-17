@@ -1,0 +1,44 @@
+html {
+  --color-red: red;
+  --color-gold: gold;
+  --color-white: white;
+  --color-light-gray: lightgray;
+  --color-gray: gray;
+  --color-dark-gray: dimgray;
+  --color-blue: blue;
+  --color-green: green;
+  --color-opaque-white: rgba(255,255,255,0.33);
+  --color-opaque-gray: rgba(200,200,200,0.33);
+  --duration-sm: 100ms;
+  --duration-md: 300ms;
+  --duration-lg: 500ms;
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  --space-unit-xs: 0.35rem;
+  --space-unit-sm: 0.65rem;
+  --space-unit-md: 1rem;
+  --space-unit-lg: 1.35rem;
+  --space-unit-xl: 1.70rem;
+  --header-font-family: Helvetica;
+  --body-font-family: Helvetica;
+  --border-radius-md: 8px;
+  --font-size-xs: 0.35rem;
+  --font-size-sm: 0.65rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.35rem;
+  --font-size-xl: 1.70rem;
+  --font-weight-bolder: bolder;
+  --font-weight-normal: normal;
+  --font-weight-lighter: lighter;
+  --line-height-mobile: 1.5;
+  --line-height-desktop: 1.35;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.basicStyling01 {
+  background: red;
+}
