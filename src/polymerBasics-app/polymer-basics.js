@@ -1,5 +1,6 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import './css/style-module-index.js';
+import './css/style-from-module.js';
 import './components/basic-button.js'
 import './components/basic-properties.js'
 import './components/basic-shadow-dom.js'
@@ -15,6 +16,7 @@ import './components/no-shadow-dom.js'
 import './components/url-in-template.js'
 import './components/style-undefined-elements.js'
 import './components/right-to-left-text.js'
+import './components/style-modules.js'
 
 /**
  * @customElement
@@ -67,6 +69,7 @@ class PolymerBasics extends PolymerElement {
       <url-in-template></url-in-template>
       <style-undefined-elements unresolved></style-undefined-elements>
       <right-to-left-text></right-to-left-text>
+      <style-modules></style-modules>
       <component-template></component-template>
     `;
   }
