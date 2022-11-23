@@ -7,7 +7,7 @@
   "devDependencies": {
     "@polymer/test-fixture": "^4.0.2",
     "@webcomponents/webcomponentsjs": "^2.0.0",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "wct-mocha": "^1.0.1"
